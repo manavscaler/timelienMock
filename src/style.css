@@ -1,0 +1,39 @@
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.left,
+.right {
+  padding: 4px 16px;
+  /* border: 1px solid black; */
+  flex: 1 1 0;
+  width: 0;
+  position: relative;
+}
+
+.item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background-color: lightcoral;
+  margin-left: -1px;
+}
+
+.left::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 100%;
+  top: 45%;
+  margin-left: -12.5px;
+  background-color: lightgreen;
+  border: 0px solid transparent;
+  border-radius: 50%;
+  z-index: 1;
+}
